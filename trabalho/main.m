@@ -2,6 +2,9 @@
 
 [audio,fs] = audioread('audio.wav'); %audio guarda os valores contidos no audio; fs guarda a frequencia
 
+imagem = imread('lena.bmp'); % essa imagem só tem uma banda; 
+                              %para saber informações da imagem colocar na Janela de Comando "info = imfinfo('lena.bmp')";
+
 while true
   disp("\n\n");
   disp("Menu");
