@@ -12,15 +12,14 @@ while true
   disp("1 - audio");
   disp("2 - imagem");
   disp("3 - deslocador de frequencia");
-  valor = input('Escolha uma opcao entre 0 e 8 : ');
+  valor = input('Escolha uma opcao entre 0 e 3 : ');
   
   switch valor
     case 0
       break;
     case 1
-      questao1(audio);
-      audiowrite("audionew.wav",questao1_1(audio),fs);
-
+     audiowrite("audioTESTE.wav",questao1_1(audio),fs); % audiowrite salva o novo áudio, e adiciona a frequência de amostras
+     
 %    case 2
 %           
 %    case 3
