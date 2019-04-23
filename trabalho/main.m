@@ -16,20 +16,16 @@ while true
     case 1
       [audio,fs] = audioread('audio.wav');
       audio = audio(1:100);
-      % audiowrite salva o novo audio, e adiciona a frequência de amostras
-      audiowrite("audioTESTE.wav",questao1(audio),fs); 
+      audiowrite("audio_saida.wav",questao1(audio),fs); 
      
     case 2
       imagem = imread('lena.bmp');
-      imagem = imagem(1:10,1:10);
-      t =questao2(imagem);
-      
-     
+      %imagem = imagem(1:10,1:10);
+      imwrite(questao2(imagem), "imagem_saida.bmp");
       
     case 3
       [audio,fs] = audioread('audio.wav');
       audio = audio(1:100);
-      % audiowrite salva o novo audio, e adiciona a frequência de amostras
       audiowrite("audioTESTE.wav",questao3(audio),fs); 
   
   endswitch    

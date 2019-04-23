@@ -1,16 +1,17 @@
 function  reverse_dct  = questao1(signal); 
   
     max_value = length(signal);
-    valor = input("Digite quantos signalDCTficientes (entre 1 e ", num2str(max_value)," devem  ser preservados: ");
-    signalDCT = ourSlowDCT(signal);  
- 
-    sortSignalDCT = sort(signalDCT);
-    limit = sortSignalDCT(length(sortSignalDCT) - valor);
+    printf( "Digite quantos coeficientes (entre 1 e %d) devem  ser preservados: ",max_value-1);
+    valor = input(" "); 
     
-    for i = 1 : length(signalDCT)
-      if(abs(signalDCT(i)) < abs(limit))
-         signalDCT(i) = 0;
-       endif
+    
+    signalDCT = ourSlowDCT(signal)
+ 
+    aux = abs(signalDCT);
+    for i = 1 : length(signalDCT) - valor
+      [minValue, minIndex] = min(aux);
+      aux(minIndex) = 100;
+      signalDCT(minIndex) = 0;
     endfor
    
     reverse_dct = ourSlowIDCT(signalDCT); %reverse_dct armazena a aplicação da IDCT em q2
