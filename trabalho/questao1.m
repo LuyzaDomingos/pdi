@@ -5,7 +5,7 @@ function  reverse_dct  = questao1(signal);
     valor = input(" "); 
     
     
-    signalDCT = ourSlowDCT(signal)
+    signalDCT = ourSlowDCT(signal);
  
     aux = abs(signalDCT);
     for i = 1 : length(signalDCT) - valor
