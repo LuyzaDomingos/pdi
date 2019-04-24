@@ -1,7 +1,7 @@
 function signalIDCT = questao2(signal2d)
   [row, col] = size(signal2d);
   max_value = row * col;
-  printf( "Digite quantos coeficientes (entre 1 e %d) devem  ser preservados: ",max_value-1);
+  printf( "Digite quantos coeficientes (entre 0 e %d) devem  ser preservados: ",max_value);
   valor = input(" ");
    
   signalDCT = ourSlow2DDCT(signal2d);

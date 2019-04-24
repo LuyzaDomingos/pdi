@@ -1,7 +1,7 @@
 function  reverse_dct  = questao1(signal); 
   
     max_value = length(signal);
-    printf( "Digite quantos coeficientes (entre 1 e %d) devem  ser preservados: ",max_value-1);
+    printf( "Digite quantos coeficientes (entre 0 e %d) devem  ser preservados: ",max_value);
     valor = input(" "); 
     
     
